@@ -21,4 +21,4 @@ def counting_sort(arr):
 if __name__ == "__main__":
     arr = [4, 2, 2, 8, 3, 3, 1]
     counting_sort(arr)
-    print("Відсортований масив:", arr)
+    print("Sorted array:", arr)

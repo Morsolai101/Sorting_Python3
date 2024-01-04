@@ -56,4 +56,4 @@ def timsort(arr):
 if __name__ == "__main__":
     arr = [12, 11, 13, 5, 6, 7]
     timsort(arr)
-    print("Відсортований масив:", arr)
+    print("Sorted array:", arr)

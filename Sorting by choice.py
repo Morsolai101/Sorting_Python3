@@ -9,5 +9,5 @@ def selection_sort(arr):
     return arr
 if __name__ == "__main__":
     arr = [64, 25, 12, 22, 11]
-    print("Масив до сортування:", arr)
-    print("Масив після сортування:", selection_sort(arr))
+    print("Array to sorting:", arr)
+    print("Array after sorting:", selection_sort(arr))

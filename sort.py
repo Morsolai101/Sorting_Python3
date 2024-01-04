@@ -155,20 +155,16 @@ def bucket_sort(arr):
     if len(arr) == 0:
         return arr
 
-    # Знайдемо максимальне та мінімальне значення
     min_value = min(arr)
     max_value = max(arr)
 
-    # Створимо список "комірок"
     bucket_range = max_value - min_value
     bucket = [[] for _ in range(len(arr))]
 
-    # Розмістимо кожен елемент у відповідну "комірку"
     for num in arr:
         index = int((num - min_value) / (bucket_range / (len(arr) - 1)))
         bucket[index].append(num)
 
-    # Сортуємо кожну "комірку" та збираємо результат
     for i in range(len(arr)):
         bucket[i] = sorted(bucket[i])
 
@@ -202,23 +198,14 @@ def counting_sort(arr):
 
 
 def shellSort(arr):
-    # Дізнаємося довжину масива
     n = len(arr)
-    # Ділимо значиння надви таким чином ділимо масив на дві частини
     gap = n // 2
-    # Створюємо while який перевіряє чи gap більше ніж ноль
     while gap > 0:
-        # Створюємо for в якому задаємо межі масив від gap до n
         for i in range(gap,n):
-            # Створюємо переміну temp точне чине місче числа в масиві
             temp = arr[i]
-            # Створюємо переміну j яка запулучає значення i
             j = i
-            # Створюємо while який перевіряє чи j не більше або рівне число gap і якщо arr більше temp
             while j >= gap and arr[j-gap] >temp:
-                # задаємо значення j, arr[j-gap] 
                 arr[j] = arr[j-gap]
-                # j = j-gap
                 j -= gap
             arr[j] = temp
         gap //= 2
