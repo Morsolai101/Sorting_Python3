@@ -1,3 +1,10 @@
+'''
+
+This file was created by Morsolai101, https://github.com/Morsolai101.
+This file is licensed under the Mozilla Public License Version 2.0
+This file can be found on https://github.com/, more specifically at https://github.com/Morsolai101/Sorting_Python3 
+
+'''
 def heapify(arr, n, i):
     largest = i  
     l = 2 * i + 1     
